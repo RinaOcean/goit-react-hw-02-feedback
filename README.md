@@ -55,4 +55,4 @@ state = {
 того, как был собран хотя бы один отзыв. Сообщение об отсутствиии статистики
 вынеси в компонент `<Notification message="No feedback given">`.
 
-![preview](../mockup/preview.gif)
+![preview](../../mockup/preview.gif)
