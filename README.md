@@ -23,7 +23,7 @@ state = {
 
 Интерфейс может выглядеть так.
 
-![preview](./mockup/step-1.png)
+![preview](../mockup/step-1.png)
 
 ## Шаг 2
 
@@ -34,7 +34,7 @@ state = {
 `countPositiveFeedbackPercentage()`, подсчитывающие эти значения основываясь на
 данных в состоянии (вычисляемые данные).
 
-![preview](./mockup/step-2.png)
+![preview](../mockup/step-2.png)
 
 ## Шаг 3
 
@@ -55,4 +55,4 @@ state = {
 того, как был собран хотя бы один отзыв. Сообщение об отсутствиии статистики
 вынеси в компонент `<Notification message="No feedback given">`.
 
-![preview](./mockup/preview.gif)
+![preview](../mockup/preview.gif)
