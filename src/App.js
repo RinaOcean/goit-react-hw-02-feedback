@@ -1,4 +1,4 @@
-import StatisticsCounter from './StatisticsCounter';
+import StatisticsCounter from './components/StatisticsCounter';
 import './App.css';
 
 function App() {
