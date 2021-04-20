@@ -1,10 +1,8 @@
-import logo from './logo.svg';
+import StatisticsCounter from './StatisticsCounter';
 import './App.css';
 
 function App() {
-  return (
-    
-  );
+  return <StatisticsCounter />;
 }
 
 export default App;
