@@ -7,8 +7,6 @@ import Statistics from '../Statistics';
 import Notifications from '../Notifications';
 
 class StatisticsCounter extends Component {
-  // static defaultProps;
-
   static propTypes = {
     good: PropTypes.number,
     neutral: PropTypes.number,
@@ -22,21 +20,21 @@ class StatisticsCounter extends Component {
   };
 
   onLeaveFeedback = event => {
-    const currValue = event.target.innerText;
+    const currValue = event.target.classList;
 
-    if (currValue === 'Good') {
+    if (currValue.contains('good')) {
       this.setState(prevState => ({
         good: prevState.good + 1,
       }));
       return;
     }
-    if (currValue === 'Neutral') {
+    if (currValue.contains('neutral')) {
       this.setState(prevState => ({
         neutral: prevState.neutral + 1,
       }));
       return;
     }
-    if (currValue === 'Bad') {
+    if (currValue.contains('bad')) {
       this.setState(prevState => ({
         bad: prevState.bad + 1,
       }));
@@ -62,7 +60,7 @@ class StatisticsCounter extends Component {
           <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
 
-        <Section title="Statistics">
+        <Section class="section_statistics" title="Statistics">
           {this.state.good > 0 ||
           this.state.neutral > 0 ||
           this.state.bad > 0 ? (

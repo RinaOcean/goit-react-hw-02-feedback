@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './Section.scss';
 
 const Section = ({ title, children }) => (
   <section className="Section">

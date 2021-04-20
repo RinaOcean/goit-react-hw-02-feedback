@@ -1,0 +1,11 @@
+.Statistics__item {
+  display: flex;
+  font-size: 18px;
+
+  &:nth-last-child(-n + 2) {
+    font-weight: 700;
+  }
+}
+.ProgressBar {
+  margin-bottom: 20px;
+}
