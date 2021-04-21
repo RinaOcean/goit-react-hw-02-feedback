@@ -9,6 +9,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
 
       return (
         <button
+          key={id}
           className={btnClassList}
           type="button"
           onClick={onLeaveFeedback}
