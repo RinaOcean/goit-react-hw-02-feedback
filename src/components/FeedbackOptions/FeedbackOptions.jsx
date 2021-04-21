@@ -1,9 +1,25 @@
 import React from 'react';
 import './FeedbackOptions.scss';
 
-const FeedbackOptions = ({ onLeaveFeedback }) => (
+const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <div className="FeedbackOptions">
-    <button
+    {options.map(({ btnName, iconName, id }) => {
+      const btnClassList = ['FeedbackOptions__btn', btnName].join(' ');
+      const iconClassList = ['material-icons icon', 'icon', btnName].join(' ');
+
+      return (
+        <button
+          className={btnClassList}
+          type="button"
+          onClick={onLeaveFeedback}
+        >
+          <span className={iconClassList}>{iconName}</span>
+          {btnName}
+        </button>
+      );
+    })}
+
+    {/* <button
       className="FeedbackOptions__btn good"
       type="button"
       onClick={onLeaveFeedback}
@@ -28,7 +44,7 @@ const FeedbackOptions = ({ onLeaveFeedback }) => (
         sentiment_very_dissatisfied
       </span>
       Bad
-    </button>
+    </button> */}
   </div>
 );
 

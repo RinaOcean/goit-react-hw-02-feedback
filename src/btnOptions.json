@@ -1,0 +1,19 @@
+[
+  {
+    "btnName": "good",
+    "iconName": "mood",
+    "id": 1
+  },
+
+  {
+    "btnName": "neutral",
+    "iconName": "sentiment_neutral",
+    "id": 2
+  },
+
+  {
+    "btnName": "bad",
+    "iconName": "sentiment_very_dissatisfied",
+    "id": 3
+  }
+]

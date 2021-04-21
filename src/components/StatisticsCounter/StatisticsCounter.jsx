@@ -6,6 +6,8 @@ import FeedbackOptions from '../FeedbackOptions';
 import Statistics from '../Statistics';
 import Notifications from '../Notifications';
 
+import btnOptions from '../../btnOptions.json';
+
 class StatisticsCounter extends Component {
   static propTypes = {
     good: PropTypes.number,
@@ -54,10 +56,14 @@ class StatisticsCounter extends Component {
   };
 
   render() {
+    const { good, neutral, bad } = this.state;
     return (
       <>
         <Section title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+          <FeedbackOptions
+            options={btnOptions}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
         </Section>
 
         <Section class="section_statistics" title="Statistics">
@@ -65,9 +71,9 @@ class StatisticsCounter extends Component {
           this.state.neutral > 0 ||
           this.state.bad > 0 ? (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
+              good={good}
+              neutral={neutral}
+              bad={bad}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             ></Statistics>
