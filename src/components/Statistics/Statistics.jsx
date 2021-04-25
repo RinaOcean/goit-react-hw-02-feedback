@@ -1,4 +1,3 @@
-import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import PropTypes from 'prop-types';
 import './Statistics.scss';
