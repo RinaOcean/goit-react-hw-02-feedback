@@ -66,7 +66,7 @@ class StatisticsCounter extends Component {
           />
         </Section>
 
-        <Section class="section_statistics" title="Statistics">
+        <Section class="section_statistics" title="Statistics overview">
           {this.state.good > 0 ||
           this.state.neutral > 0 ||
           this.state.bad > 0 ? (
